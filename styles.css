@@ -164,6 +164,7 @@
 @media(max-width:700px){.scene-research-gcode{inset:14% 2% 10%}}
 .advocacy-gallery .detail-photo img{display:block;width:100%;aspect-ratio:1.3;object-fit:cover;background:#1E293B;border:1px solid var(--line);box-shadow:0 12px 28px #02061716}
 .advocacy-gallery .detail-photo:last-child img{object-position:center 42%}
+.advocacy-gallery.mun-gallery .detail-photo img{height:auto;aspect-ratio:auto;object-fit:contain;object-position:center}
 .frc-gallery .detail-photo img{display:block;width:100%;aspect-ratio:1.3;object-fit:cover;background:#1E293B;border:1px solid var(--line);box-shadow:0 12px 28px #02061716}
 .frc-gallery .detail-photo--contain img{object-fit:contain;background:#1E293B}
 .frc-gallery .detail-photo-grid{display:block;column-count:3;column-gap:14px}
