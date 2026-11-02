@@ -1,4 +1,20 @@
 (() => {
+  // A measurement ID identifies the Analytics property; it is not a secret key.
+  const analytics = document.createElement("script");
+  analytics.async = true;
+  analytics.src = "https://www.googletagmanager.com/gtag/js?id=G-5NLJTLQR4S";
+  document.head.appendChild(analytics);
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { window.dataLayer.push(arguments); }
+  gtag("js", new Date());
+  gtag("config", "G-5NLJTLQR4S");
+  const siteFooter = document.querySelector("footer");
+  if (siteFooter) {
+    const analyticsNotice = document.createElement("small");
+    analyticsNotice.textContent = "This site uses Google Analytics to understand visits.";
+    siteFooter.appendChild(analyticsNotice);
+  }
+
   const doc = document.documentElement;
   const progress = document.querySelector("#reading-progress");
   const year = document.querySelector("#year");
