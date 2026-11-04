@@ -439,3 +439,5 @@ body>.topbar,body>main,body>footer{position:relative;z-index:1}
 .advocacy-gallery.mun-gallery .detail-photo img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;transform:none}
 @media(hover:hover){.advocacy-gallery.mun-gallery .detail-photo:hover img{transform:none}}
 @media(max-width:700px){.home-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.home-photo-grid a:nth-child(even){transform:none}.home-photo-grid a:nth-child(even):hover{transform:translateY(-4px)}.recognition-grid{grid-template-columns:1fr;gap:12px}}
+
+.resume-page .resume-bullets{margin:12px 0 0;padding-left:1.25em;color:var(--muted);font-size:14px;line-height:1.75}.resume-page .resume-bullets li+li{margin-top:8px}.resume-page .resume-bullets a{color:var(--orange);border-bottom:1px solid}
