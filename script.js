@@ -21,7 +21,7 @@
   if (year) year.textContent = new Date().getFullYear();
 
   const motionAllowed = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const numberMetrics = [...document.querySelectorAll(".chapter-points b, .detail-facts b")];
+  const numberMetrics = [...document.querySelectorAll(".chapter-points b")];
   const rollNumber = (element) => {
     if (!motionAllowed || element.dataset.rolled === "true") return;
     const original = element.dataset.rollTarget || element.textContent.trim();
@@ -105,13 +105,36 @@
       if (visualProgress) visualProgress.style.transform = `translateX(${activeIndex * 100}%)`;
     };
 
-    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const observer = new IntersectionObserver((entries) => {
-        const visible = entries.filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (visible) setActive(visible.target);
-      }, { rootMargin: "-38% 0px -38% 0px", threshold: [0, .2, .45, .7, 1] });
-      chapters.forEach((chapter) => observer.observe(chapter));
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.body.classList.add("scene-scroll-ready");
+      let pending = false;
+      let activeChapter = null;
+      const updateChapter = () => {
+        const target = window.innerHeight * .55;
+        let nearest = chapters[0];
+        let distance = Infinity;
+        chapters.forEach((chapter) => {
+          const bounds = chapter.getBoundingClientRect();
+          const current = Math.abs(bounds.top + bounds.height / 2 - target);
+          if (current < distance) {
+            distance = current;
+            nearest = chapter;
+          }
+        });
+        if (nearest !== activeChapter) {
+          activeChapter = nearest;
+          setActive(nearest);
+        }
+        pending = false;
+      };
+      window.addEventListener("scroll", () => {
+        if (!pending) {
+          pending = true;
+          requestAnimationFrame(updateChapter);
+        }
+      }, { passive: true });
+      window.addEventListener("resize", updateChapter);
+      updateChapter();
     } else {
       chapters.forEach((chapter) => chapter.classList.add("is-active"));
     }
@@ -119,20 +142,6 @@
     chapters.forEach((chapter) => {
       chapter.addEventListener("focusin", () => setActive(chapter));
     });
-  }
-
-  const factMetrics = [...document.querySelectorAll(".detail-facts b")];
-  if (factMetrics.length && motionAllowed && "IntersectionObserver" in window) {
-    const factObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        rollNumber(entry.target);
-        factObserver.unobserve(entry.target);
-      });
-    }, { threshold: 0.65 });
-    factMetrics.forEach((metric) => factObserver.observe(metric));
-  } else {
-    factMetrics.forEach(rollNumber);
   }
 
   const outreachStory = document.querySelector(".outreach-story-layout");
