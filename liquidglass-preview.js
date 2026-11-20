@@ -24,7 +24,7 @@ if (header && navigation && !matchMedia('(prefers-reduced-transparency: reduce)'
  navigation.dataset.config=JSON.stringify({
   floating:false,cornerRadius:14,zRadius:12,blurAmount:.08,
   refraction:.65,chromAberration:.025,edgeHighlight:.25,
-  specular:.25,fresnel:.7,shadowOpacity:.2,tintStrength:.1
+  specular:.12,fresnel:.45,shadowOpacity:0,tintStrength:.06
  });
  try {
   const instance=await LiquidGlass.init({root:header,glassElements:[navigation]});

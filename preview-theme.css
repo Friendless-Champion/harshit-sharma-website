@@ -1351,3 +1351,52 @@ body.about-page .lego-scroll-study{margin-block:72px}
  --display:"Roboto Slab",serif;
  --mono:"Roboto Slab",serif;
 }
+
+/* Clear dark glass without the diffuse gray wash around panels. */
+body .recognition .recognition-grid article,
+body .recognition .recognition-grid article:hover{
+ background:oklch(27.5% .035 257 / .72);
+ border-color:oklch(84% .02 255 / .25);
+ box-shadow:inset 0 1px 0 oklch(98% .005 250 / .08);
+}
+body .topbar nav,
+body .topbar nav.glass-ready{
+ background:oklch(27.5% .035 257 / .38);
+ border-color:oklch(84% .02 255 / .25);
+ box-shadow:inset 0 1px 0 oklch(98% .005 250 / .08);
+}
+
+/* Restore the slate-blue experience panels and remove the diffuse halo. */
+:root{
+ --experience-glass-top:oklch(86% .02 255 / .07);
+ --experience-glass-base:oklch(27.5% .035 257 / .9);
+ --experience-glass-edge:oklch(84% .02 255 / .25);
+ --experience-glass-light:oklch(98% .005 250 / .08);
+}
+body.experience-page .chapter,
+body.experience-page .directory-card,
+body.experience-page .directory-card:hover,
+body.experience-page .story-visual{
+ background:oklch(27.5% .035 257 / .9);
+ border-color:var(--experience-glass-edge);
+ box-shadow:inset 0 1px 0 var(--experience-glass-light);
+}
+
+/* Keep shared glass panels dark and clear, without a gray flood or outer glow. */
+:root{
+ --summary-glass-top:oklch(86% .02 255 / .06);
+ --summary-glass-base:oklch(27.5% .035 257 / .9);
+ --summary-glass-edge:oklch(84% .02 255 / .25);
+ --summary-glass-highlight:oklch(98% .005 250 / .08);
+ --summary-glass-shadow:transparent;
+}
+body .detail-facts,
+body .top-skills-list,
+body .intake-specs,
+body .science-awards-year,
+body .debate-awards-year,
+body.resume-page .resume-experience-card{
+ background:oklch(27.5% .035 257 / .9);
+ border-color:var(--summary-glass-edge);
+ box-shadow:inset 0 1px 0 var(--summary-glass-highlight);
+}
