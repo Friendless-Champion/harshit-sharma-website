@@ -573,3 +573,1407 @@ body:has(> main > .hero) .recognition-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Consolidated portfolio theme: loaded atomically with the base stylesheet. */
+500;600;700&display=swap");
+/* Hallmark · local experience study · original scroll scenes, charcoal surfaces */
+/* Hallmark · critique: original scene wiring retained; typography and surfaces unify the page */
+:root {
+ --paper:oklch(20.768% 0.03982 265.75); --paper-light:oklch(27.950% 0.03685 260.03); --ink:oklch(98.415% 0.00341 247.86); --muted:oklch(86.898% 0.01985 252.89);
+ --line:oklch(71.067% 0.03511 256.79 / 0.28); --orange:oklch(76.859% 0.16466 70.08); --blue:oklch(76.859% 0.16466 70.08); --green:oklch(76.859% 0.16466 70.08);
+ --preview-body:"Roboto Slab",serif;
+ --preview-display:"Roboto Slab",serif;
+ --preview-clear:transparent;
+}
+
+html,body{overflow-x:clip}
+body {
+ background:var(--paper);
+ color:var(--ink);
+ font-family:var(--preview-body);
+ background-image:radial-gradient(var(--line) .6px,var(--preview-clear) .6px);
+ background-size:7px 7px;
+}
+body::before{display:none}
+body .topbar {
+ background:var(--paper);
+ box-shadow:none;
+ backdrop-filter:none;
+ border-color:var(--line);
+}
+body .topbar::before{display:none}
+body .work-section{background:var(--preview-clear)}
+body .topbar nav a,
+body .kicker,
+body .chapter-meta,
+body .chapter-date,
+body .text-link,
+body .directory-category,
+body .directory-role,
+body .directory-number,
+body .scene-index,
+body .scene-hud,
+body .scene-caption,
+body .section-endnote,
+body .chapter-points,
+body .contact-bottom {
+ font-family:var(--preview-body);
+ letter-spacing:0;
+}
+body h1,
+body h2,
+body h3,
+body .directory-card h3,
+body .chapter h3,
+body .contact-inner h2 {
+ font-family:var(--preview-display);
+ font-weight:500;
+ letter-spacing:-.05em;
+}
+body .section-intro h2{font-size:clamp(52px,7vw,104px);line-height:1.02}
+body .chapter,
+body .directory-card {
+ background:var(--paper-light);
+ background-image:none;
+ box-shadow:none;
+ border:1px solid var(--line);
+ border-radius:8px;
+}
+body .story-visual{
+ background:var(--paper);
+ border:1px solid var(--line);
+ box-shadow:none;
+ border-radius:8px;
+}
+body .story-visual::before,
+body .story-visual::after{display:none}
+body .chapter p,
+body .directory-summary{line-height:1.7}
+body .contact-section,
+body footer{background:var(--paper);color:var(--ink);box-shadow:none}
+body .contact-section{backdrop-filter:none}
+body .contact-bottom,
+body .contact-inner .kicker{color:var(--muted)}
+body .contact-mail{color:var(--ink)}
+body .directory-card:hover{background:var(--paper-light);box-shadow:none}
+:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+@media(max-width:700px){
+ :root{--paper:oklch(20.768% 0.03982 265.75);--paper-light:oklch(27.950% 0.03685 260.03);--ink:oklch(98.415% 0.00341 247.86);--muted:oklch(86.898% 0.01985 252.89);--line:oklch(71.067% 0.03511 256.79 / 0.28);--orange:oklch(76.859% 0.16466 70.08);--blue:oklch(76.859% 0.16466 70.08);--green:oklch(76.859% 0.16466 70.08)}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+/* A floating navigation bar over the original experience scenes. */
+body .topbar {
+ height:96px;
+ background:var(--preview-clear);
+ border:0;
+ display:flex;
+ justify-content:space-between;
+}
+body .topbar-note{display:none}
+body .topbar nav{
+ display:flex;
+ gap:4px;
+ padding:6px;
+ border:1px solid var(--line);
+ background:var(--paper-light);
+ border-radius:12px;
+}
+body .topbar nav a {
+ font-family:var(--preview-body);
+ font-size:14px;
+ padding:12px 20px;
+ border:0;
+ border-radius:8px;
+ box-shadow:none;
+}
+body .topbar nav a:hover{
+ background:var(--paper);
+ box-shadow:none;
+ color:var(--orange);
+}
+body .wordmark{
+ font-family:var(--preview-display);
+ font-size:28px;
+ font-weight:600;
+ letter-spacing:-2px;
+}
+@media(max-width:700px){
+ body .topbar{height:80px;padding-inline:16px}
+ body .topbar nav a{font-size:12px;padding:10px}
+ body .story-visual-wrap{top:80px}
+}
+
+/* Shared portfolio surfaces and text. Mechanism controls and animation selectors retain their rules. */
+body {font-family:var(--preview-body);background:var(--paper);color:var(--ink)}
+body::before{display:none}
+body .topbar-note{display:none}
+body .topbar nav a,
+body .kicker,
+body .detail-crumb,
+body .detail-facts span,
+body .resume-date,
+body .about-page-index,
+body .contact-bottom,
+body .text-link{font-family:var(--preview-body);letter-spacing:0}
+body h1,body h2,body h3,
+body .hero h1,body .hero-statement,
+body .about-page-hero h1,body .about-page-lede,
+body .detail-hero h1,body .detail-lede,
+body .resume-content h1,body .resume-summary,
+body .recognition h2,body .contact-inner h2{
+ font-family:var(--preview-display);
+ font-weight:500;
+ letter-spacing:-.05em;
+}
+body .topbar,body.detail-page .topbar{
+ background:var(--preview-clear);box-shadow:none;backdrop-filter:none;
+ -webkit-backdrop-filter:none;border:0;
+}
+body.detail-page .topbar::before{display:none}
+body .topbar nav{background:var(--paper-light);border:1px solid var(--line);border-radius:12px}
+body .home-photo-grid a,
+body .recognition-grid,
+body .recognition .recognition-grid article,
+body .about-page-details article,
+body .resume-entry,
+body .detail-work-row,
+body .detail-facts,
+body .detail-facts div,
+body .detail-photo-note,
+body .top-skills-list,
+body .top-skills-list li{
+ background:var(--paper-light);
+ background-image:none;
+ border-color:var(--line);
+ box-shadow:none;
+ backdrop-filter:none;
+}
+body .resume-summary,body .resume-entry p,
+body .about-page-lede,body .detail-lede,
+body .contact-bottom{color:var(--muted)}
+body .contact-section,body footer{
+ background:var(--paper);color:var(--ink);
+ box-shadow:none;backdrop-filter:none;
+}
+body .contact-inner .kicker{color:var(--muted)}
+body .contact-mail{color:var(--ink)}
+body .about-page-next>a,body .recognition-grid article>b{font-family:var(--preview-display)}
+body .hero h1{font-size:clamp(72px,11vw,156px);line-height:.9}
+body .hero h1 .accent-word{color:var(--ink)}
+@media(prefers-reduced-transparency:reduce){
+ body .topbar,body.detail-page .topbar{background:var(--paper)}
+}
+
+/* Preserve the original robotics exhibit palette and typography inside its animations. */
+body .gear-nav,
+body .intake-study {
+ --paper:oklch(20.768% 0.03982 265.75);--paper-light:oklch(27.950% 0.03685 260.03);--ink:oklch(98.415% 0.00341 247.86);--muted:oklch(86.898% 0.01985 252.89);
+ --line:oklch(71.067% 0.03511 256.79 / 0.28);--orange:oklch(76.859% 0.16466 70.08);--blue:oklch(76.859% 0.16466 70.08);--green:oklch(76.859% 0.16466 70.08);
+ --mono:"Roboto Slab",serif;--display:"Roboto Slab",serif;--body:"Roboto Slab",serif;
+}
+body .detail-crumb span:last-child{color:var(--orange)}
+
+/* Shared dotted drafting grid on the original slate palette. */
+:root { --preview-dot:oklch(71.067% 0.03511 256.79 / 0.18); }
+body,
+body.experience-page {
+ background-color:var(--paper);
+ background-image:radial-gradient(circle,var(--preview-dot) .8px,transparent .8px);
+ background-size:20px 20px;
+}
+body .work-section{background:transparent}
+
+/* Local liquid-glass navigation with a CSS fallback. */
+body .topbar{isolation:isolate}
+body .topbar .glass-grid-source{
+ position:absolute;inset:0;width:100%;height:100%;
+ pointer-events:none;z-index:-2;
+}
+body .topbar nav{
+ background:oklch(27.950% 0.03685 260.03 / 0.55);
+ backdrop-filter:blur(12px);
+ -webkit-backdrop-filter:blur(12px);
+ border-color:oklch(86.898% 0.01985 252.89 / 0.3);
+ box-shadow:inset 0 1px 0 oklch(98.415% 0.00341 247.86 / 0.12),0 8px 24px oklch(12.880% 0.04060 264.70 / 0.18);
+}
+body .topbar nav.glass-ready{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
+@media(prefers-reduced-transparency:reduce){
+ body .topbar nav{background:var(--paper-light);backdrop-filter:none}
+}
+
+/* Clear separation between scroll chapters prevents the prior panel's rim lingering. */
+body.experience-page.scene-scroll-ready .chapter {
+ position:relative;
+ margin-block:0 32px;
+ transform:none;
+ opacity:0;
+ transition:opacity 240ms ease!important;
+}
+body.experience-page .chapter.is-active,
+body.experience-page .chapter:focus-within{opacity:1}
+body.experience-page .scene-art{
+ transition:opacity 240ms ease,transform 320ms ease!important;
+}
+@media(prefers-reduced-motion:reduce){
+ body.experience-page .chapter{opacity:1;transition:none!important}
+ body.experience-page .scene-art{transition:none!important}
+}
+@media print{
+ body.experience-page .chapter{opacity:1}
+}
+body.experience-page.scene-scroll-ready .chapter.is-active,
+body.experience-page.scene-scroll-ready .chapter:focus-within{opacity:1}
+@media(prefers-reduced-motion:reduce){
+ body.experience-page.scene-scroll-ready .chapter{opacity:1}
+}
+
+/* A brief typographic flutter on navigation hover and keyboard focus. */
+@keyframes nav-type-flutter {
+ 0%,100%{transform:translateY(0)}
+ 18%{transform:translateY(-2px)}
+ 34%{transform:translateY(1px)}
+ 52%{transform:translateY(-1px)}
+ 72%{transform:translateY(1px)}
+}
+body .topbar nav a .nav-label{
+ display:inline-block;
+ pointer-events:none;
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ body .topbar nav a:hover .nav-label{
+  animation:nav-type-flutter 340ms steps(1,end) both;
+ }
+}
+@media(prefers-reduced-motion:no-preference){
+ body .topbar nav a:focus-visible .nav-label{
+  animation:nav-type-flutter 340ms steps(1,end) both;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ body .topbar nav a .nav-label{animation:none!important}
+}
+
+/* Each letter rolls down into a second identical letter, staggered across the label. */
+body .topbar nav a .nav-label {
+ display:inline-flex;
+ vertical-align:middle;
+ animation:none!important;
+}
+body .topbar nav a .nav-letter {
+ display:inline-block;
+ position:relative;
+ overflow:hidden;
+ height:1.35em;
+ line-height:1.35;
+}
+body .topbar nav a .nav-letter>span{
+ display:block;
+ transition:transform 480ms cubic-bezier(.22,.7,.2,1);
+ transition-delay:calc(var(--letter-index)*22ms);
+}
+body .topbar nav a .nav-letter>span:last-child{
+ position:absolute;
+ inset:auto 0 100%;
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ body .topbar nav a:hover .nav-letter>span{transform:translateY(100%)}
+}
+@media(prefers-reduced-motion:no-preference){
+ body .topbar nav a:focus-visible .nav-letter>span{transform:translateY(100%)}
+}
+@media(prefers-reduced-motion:reduce){
+ body .topbar nav a .nav-letter>span{transition:none!important;transform:none!important}
+}
+
+/* Clickable homepage photographs: slower lift and a reversible tracing outline. */
+body .home-photo-grid a {
+ position:relative;
+ isolation:isolate;
+ transition:transform 250ms ease;
+}
+body .home-photo-grid a::after {
+ content:"";
+ position:absolute;
+ inset:0;
+ border-radius:inherit;
+ pointer-events:none;
+ z-index:2;
+ background:
+  linear-gradient(var(--ink),var(--ink)) left top / var(--trace-width,0%) 3.5px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) right top / 3.5px var(--trace-height,0%) no-repeat,
+  linear-gradient(var(--ink),var(--ink)) right bottom / var(--trace-width,0%) 3.5px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) left bottom / 3.5px var(--trace-height,0%) no-repeat;
+ transition:--trace-width 260ms ease,--trace-height 260ms ease 100ms;
+}
+@property --trace-width {
+ syntax:"<percentage>";
+ inherits:false;
+ initial-value:0%;
+}
+@property --trace-height {
+ syntax:"<percentage>";
+ inherits:false;
+ initial-value:0%;
+}
+@media(hover:hover){
+ body .home-photo-grid a:hover::after{
+  --trace-width:100%;
+  --trace-height:100%;
+ }
+}
+body .home-photo-grid a:focus-visible::after{
+ --trace-width:100%;
+ --trace-height:100%;
+ transition:none;
+}
+@media(prefers-reduced-motion:reduce){
+ body .home-photo-grid a,
+ body .home-photo-grid a::after{transition:none!important}
+ body .home-photo-grid a:hover{transform:none}
+}
+
+/* Homepage awards, each held on a refractive glass panel. */
+body .recognition-grid{
+ position:relative;
+ isolation:isolate;
+ background:transparent;
+ border:0;
+ gap:14px;
+ overflow:visible;
+}
+body .recognition-grid .award-glass-source{
+ position:absolute;inset:0;width:100%;height:100%;
+ pointer-events:none;z-index:-2;
+}
+body .recognition .recognition-grid article{
+ border:1px solid var(--line);
+ border-radius:12px;
+ background:oklch(27.950% 0.03685 260.03 / 0.55);
+ backdrop-filter:blur(12px);
+ -webkit-backdrop-filter:blur(12px);
+ box-shadow:inset 0 1px 0 oklch(98.415% 0.00341 247.86 / 0.12);
+}
+body .recognition .recognition-grid article.award-glass-ready{
+ background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+@media(prefers-reduced-transparency:reduce){
+ body .recognition .recognition-grid article{background:var(--paper-light);backdrop-filter:none}
+}
+
+/* Clickable homepage photographs: slower lift and a reversible tracing outline. */
+body .recognition .recognition-grid article {
+ position:relative;
+ isolation:isolate;
+ transition:transform 250ms ease;
+}
+body .recognition .recognition-grid article::after {
+ content:"";
+ position:absolute;
+ inset:0;
+ border-radius:inherit;
+ pointer-events:none;
+ z-index:2;
+ background:
+  linear-gradient(var(--ink),var(--ink)) left top / var(--trace-width,0%) 3.5px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) right top / 3.5px var(--trace-height,0%) no-repeat,
+  linear-gradient(var(--ink),var(--ink)) right bottom / var(--trace-width,0%) 3.5px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) left bottom / 3.5px var(--trace-height,0%) no-repeat;
+ transition:--trace-width 260ms ease,--trace-height 260ms ease 100ms;
+}
+@property --trace-width {
+ syntax:"<percentage>";
+ inherits:false;
+ initial-value:0%;
+}
+@property --trace-height {
+ syntax:"<percentage>";
+ inherits:false;
+ initial-value:0%;
+}
+@media(hover:hover){
+ body .recognition .recognition-grid article:hover::after{
+  --trace-width:100%;
+  --trace-height:100%;
+ }
+}
+body .recognition .recognition-grid article:focus-within::after{
+ --trace-width:100%;
+ --trace-height:100%;
+ transition:none;
+}
+@media(prefers-reduced-motion:reduce){
+ body .recognition .recognition-grid article,
+ body .recognition .recognition-grid article::after{transition:none!important}
+ body .recognition .recognition-grid article:hover{transform:none}
+}
+
+
+body .recognition .recognition-grid article{
+ position:relative;
+ isolation:isolate;
+ color:var(--ink);
+ transition:transform 250ms ease;
+}
+body .recognition .recognition-grid article>b,
+body .recognition .recognition-grid article>p,
+body .recognition .recognition-grid article>span{
+ position:relative;
+ z-index:1;
+ pointer-events:none;
+}
+body .recognition .recognition-grid article>b{color:var(--ink)}
+body .recognition .recognition-grid article>.award-link{
+ position:absolute;inset:0;z-index:3;
+ border-radius:inherit;
+}
+body .recognition .recognition-grid article:focus-within{
+ outline:2px solid var(--orange);outline-offset:4px;
+}
+@media(hover:hover){
+ body .recognition .recognition-grid article:hover{
+  transform:translateY(-4px);
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ body .recognition .recognition-grid article:hover{transform:none}
+}
+
+/* Stable glass surfaces for moving award cards. The WebGL renderer remains on navigation. */
+:root{
+ --award-glass-top:oklch(86.898% 0.01985 252.89 / 0.09);
+ --award-glass-bottom:oklch(27.950% 0.03685 260.03 / 0.68);
+ --award-glass-edge:oklch(86.898% 0.01985 252.89 / 0.3);
+ --award-glass-highlight:oklch(98.415% 0.00341 247.86 / 0.14);
+ --award-glass-shadow:oklch(12.880% 0.04060 264.70 / 0.2);
+}
+body .recognition .recognition-grid article{
+ background:linear-gradient(140deg in oklch,var(--award-glass-top),var(--award-glass-bottom));
+ border:1px solid var(--award-glass-edge);
+ backdrop-filter:blur(12px);
+ -webkit-backdrop-filter:blur(12px);
+ box-shadow:inset 0 1px 0 var(--award-glass-highlight),0 8px 24px var(--award-glass-shadow);
+}
+@media(prefers-reduced-transparency:reduce){
+ body .recognition .recognition-grid article{
+  background:var(--paper-light);backdrop-filter:none;-webkit-backdrop-filter:none;
+ }
+}
+
+/* Scroll entrances use independent translate so hover lifts remain intact. */
+@media(prefers-reduced-motion:no-preference){
+ .scroll-entrance{
+  opacity:0;
+  translate:0 24px;
+ }
+ .scroll-entrance.scroll-arrived{
+  animation:portfolio-arrival 620ms cubic-bezier(.2,.75,.2,1) both;
+  animation-delay:var(--entrance-delay,0ms);
+ }
+}
+@keyframes portfolio-arrival{
+ from{opacity:0;translate:0 24px}
+ to{opacity:1;translate:0 0}
+}
+@media(prefers-reduced-motion:reduce){
+ .scroll-entrance{opacity:1;translate:none;animation:none!important}
+}
+@media print{
+ .scroll-entrance{opacity:1;translate:none;animation:none!important}
+}
+
+.scroll-line-mask{display:block;overflow:clip;padding-bottom:.08em;margin-bottom:-.08em}
+.scroll-line-text{display:block}
+@media(prefers-reduced-motion:no-preference){
+ .scroll-entrance .scroll-line-text{transform:translateY(110%)}
+ .scroll-arrived .scroll-line-text{
+  animation:portfolio-line-roll 800ms cubic-bezier(.16,1,.3,1) both;
+  animation-delay:var(--line-delay,0ms);
+ }
+}
+@keyframes portfolio-line-roll{
+ from{transform:translateY(110%)}
+ to{transform:translateY(0)}
+}
+@media(prefers-reduced-motion:reduce){
+ .scroll-line-text{transform:none;animation:none!important}
+}
+@media print{
+ .scroll-line-text{transform:none!important;animation:none!important}
+}
+
+/* Real competition robot, linked to its engineering story. */
+body .hero-robot-project{
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-self:center;
+ min-width:0;
+ padding:24px;
+ border:1px solid var(--line);
+ border-radius:12px;
+ background:var(--preview-clear);
+ transition:transform 250ms ease,border-color 250ms ease;
+}
+body .hero-robot-project img{
+ display:block;
+ width:100%;
+ height:auto;
+ aspect-ratio:5/4;
+ object-fit:contain;
+}
+body .hero-robot-project>span{
+ display:flex;
+ justify-content:space-between;
+ gap:16px;
+ padding-top:24px;
+ border-top:1px solid var(--line);
+ color:var(--muted);
+ font-family:var(--preview-body);
+ font-size:14px;
+}
+body .hero-robot-project:focus-visible{
+ outline:2px solid var(--orange);
+ outline-offset:6px;
+}
+@media(hover:hover){
+ body .hero-robot-project:hover{transform:translateY(-4px);border-color:var(--orange)}
+ body .hero-robot-project:hover>span{color:var(--orange)}
+}
+@media(max-width:700px){
+ body .hero-robot-project{padding:16px;margin-top:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ body .hero-robot-project{transition:none}
+ body .hero-robot-project:hover{transform:none}
+}
+
+/* Keep the glass canvas inside the navigation's own stacking context. */
+:root {
+ --nav-glass-fill:oklch(27.950% 0.03685 260.03 / 0.28);
+ --nav-glass-rim:oklch(98.415% 0.00341 247.86 / 0.42);
+ --nav-glass-top:oklch(98.415% 0.00341 247.86 / 0.2);
+ --nav-glass-shadow:oklch(12.880% 0.04060 264.70 / 0.3);
+}
+body .topbar nav,
+body .topbar nav.glass-ready{
+ position:relative;
+ isolation:isolate;
+ background:var(--nav-glass-fill);
+ border:1px solid var(--nav-glass-rim);
+ box-shadow:inset 0 1px 0 var(--nav-glass-top),0 10px 28px var(--nav-glass-shadow);
+}
+body .topbar nav.glass-ready>canvas{z-index:-1}
+body .topbar nav>a{position:relative;z-index:1}
+
+/* Give the floating glass rail room at the viewport edge. */
+body .topbar,body.detail-page .topbar{
+ top:0;
+ min-height:100px;
+ height:auto;
+ padding-block:18px;
+ overflow:visible;
+}
+body .topbar nav,body .topbar nav.glass-ready{
+ background:linear-gradient(145deg in oklch,oklch(86.898% 0.01985 252.89 / 0.17),oklch(27.950% 0.03685 260.03 / 0.24) 45%,oklch(20.768% 0.03982 265.75 / 0.16));
+ border-color:oklch(98.415% 0.00341 247.86 / 0.5);
+ box-shadow:inset 0 2px 0 oklch(98.415% 0.00341 247.86 / 0.23),inset 0 -1px 0 oklch(71.067% 0.03511 256.79 / 0.25),0 12px 32px oklch(12.880% 0.04060 264.70 / 0.36);
+}
+body .recognition .recognition-grid article{
+ background:linear-gradient(140deg in oklch,oklch(86.898% 0.01985 252.89 / 0.17),oklch(27.950% 0.03685 260.03 / 0.48) 48%,oklch(20.768% 0.03982 265.75 / 0.28));
+ border-color:oklch(86.898% 0.01985 252.89 / 0.4);
+ box-shadow:inset 0 2px 0 oklch(98.415% 0.00341 247.86 / 0.18),inset 0 -1px 0 oklch(71.067% 0.03511 256.79 / 0.15),0 10px 28px oklch(12.880% 0.04060 264.70 / 0.25);
+}
+@media(max-width:700px){
+ body .topbar,body.detail-page .topbar{min-height:84px;padding-block:14px}
+}
+
+/* Glass is present from first paint; the shader enhances it without replacing the surface. */
+body .topbar nav,
+body .topbar nav.glass-ready{
+ backdrop-filter:blur(12px) saturate(135%);
+ -webkit-backdrop-filter:blur(12px) saturate(135%);
+}
+body .topbar nav>canvas{
+ opacity:0;
+ transition:opacity 180ms ease;
+}
+body .topbar nav.glass-ready>canvas{opacity:1}
+@media(prefers-reduced-motion:reduce){
+ body .topbar nav>canvas{transition:none}
+}
+@media(prefers-reduced-transparency:reduce){
+ body .topbar nav{
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+  background:var(--paper-light);
+ }
+}
+
+/* A quiet, slow glass arrival while navigation labels remain fully readable. */
+body .topbar nav,
+body .topbar nav.glass-ready{
+ border-color:oklch(86.898% 0.01985 252.89 / 0.24);
+ background:linear-gradient(145deg in oklch,oklch(86.898% 0.01985 252.89 / 0.08),oklch(27.950% 0.03685 260.03 / 0.2));
+ box-shadow:inset 0 1px 0 oklch(98.415% 0.00341 247.86 / 0.1),0 8px 24px oklch(12.880% 0.04060 264.70 / 0.18);
+}
+body .topbar nav>canvas{
+ opacity:0;
+ transition:opacity 2400ms cubic-bezier(.22,.61,.36,1);
+}
+body .topbar nav.glass-ready>canvas{opacity:.65}
+@media(prefers-reduced-motion:reduce){
+ body .topbar nav>canvas{transition:none}
+}
+
+/* Experience panels catch a restrained glass highlight over the dotted slate. */
+:root{
+ --experience-glass-top:oklch(86.898% 0.01985 252.89 / 0.11);
+ --experience-glass-base:oklch(27.950% 0.03685 260.03 / 0.64);
+ --experience-glass-edge:oklch(86.898% 0.01985 252.89 / 0.26);
+ --experience-glass-light:oklch(98.415% 0.00341 247.86 / 0.13);
+ --experience-glass-shadow:oklch(12.880% 0.04060 264.70 / 0.18);
+}
+body.experience-page .chapter,
+body.experience-page .directory-card,
+body.experience-page .directory-card:hover,
+body.experience-page .story-visual{
+ background:linear-gradient(145deg in oklch,var(--experience-glass-top),var(--experience-glass-base) 52%);
+ border:1px solid var(--experience-glass-edge);
+ box-shadow:inset 0 1px 0 var(--experience-glass-light),0 12px 32px var(--experience-glass-shadow);
+ backdrop-filter:blur(10px);
+ -webkit-backdrop-filter:blur(10px);
+}
+@media(prefers-reduced-transparency:reduce){
+ body.experience-page .chapter,
+ body.experience-page .directory-card,
+ body.experience-page .directory-card:hover,
+ body.experience-page .story-visual{
+  background:var(--paper-light);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+ }
+}
+
+/* Clickable homepage photographs: slower lift and a reversible tracing outline. */
+body.experience-page .directory-card {
+ position:relative;
+ isolation:isolate;
+ transition:transform 250ms ease;
+}
+body.experience-page .directory-card::after {
+ content:"";
+ position:absolute;
+ inset:0;
+ border-radius:inherit;
+ pointer-events:none;
+ z-index:2;
+ background:
+  linear-gradient(var(--ink),var(--ink)) left top / var(--trace-width,0%) 3.5px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) right top / 3.5px var(--trace-height,0%) no-repeat,
+  linear-gradient(var(--ink),var(--ink)) right bottom / var(--trace-width,0%) 3.5px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) left bottom / 3.5px var(--trace-height,0%) no-repeat;
+ transition:--trace-width 260ms ease,--trace-height 260ms ease 100ms;
+}
+@property --trace-width {
+ syntax:"<percentage>";
+ inherits:false;
+ initial-value:0%;
+}
+@property --trace-height {
+ syntax:"<percentage>";
+ inherits:false;
+ initial-value:0%;
+}
+@media(hover:hover){
+ body.experience-page .directory-card:hover::after{
+  --trace-width:100%;
+  --trace-height:100%;
+ }
+}
+body.experience-page .directory-card:focus-within::after{
+ --trace-width:100%;
+ --trace-height:100%;
+ transition:none;
+}
+@media(prefers-reduced-motion:reduce){
+ body.experience-page .directory-card,
+ body.experience-page .directory-card::after{transition:none!important}
+ body.experience-page .directory-card:hover{transform:none}
+}
+
+
+/* Stronger tinted glass and matching award-style hover for the experience directory. */
+:root{
+ --experience-glass-top:oklch(86.898% 0.01985 252.89 / 0.18);
+ --experience-glass-base:oklch(27.950% 0.03685 260.03 / 0.52);
+ --experience-glass-edge:oklch(86.898% 0.01985 252.89 / 0.38);
+ --experience-glass-light:oklch(98.415% 0.00341 247.86 / 0.21);
+}
+body.experience-page .directory-card{
+ position:relative;
+ isolation:isolate;
+ transition:transform 250ms ease!important;
+}
+body.experience-page .directory-card:hover{
+ transform:translateY(-4px);
+}
+body.experience-page .directory-card:focus-within{
+ outline:2px solid var(--orange);
+ outline-offset:4px;
+}
+@media(prefers-reduced-motion:reduce){
+ body.experience-page .directory-card,
+ body.experience-page .directory-card::after{transition:none!important}
+ body.experience-page .directory-card:hover{transform:none}
+}
+
+body.experience-page .directory-summary{font-size:16px;line-height:1.7}
+body.experience-page .directory-role{font-size:14px;line-height:1.65}
+
+body .hero-mechanism{
+ min-width:0;
+ padding:24px;
+ border:1px solid var(--line);
+ border-radius:12px;
+ background:linear-gradient(145deg in oklch,oklch(86.898% 0.01985 252.89 / 0.05),oklch(27.950% 0.03685 260.03 / 0.2));
+}
+.mechanism-canvas{
+ display:block;width:100%;aspect-ratio:10/7;
+ touch-action:pan-y;cursor:grab;
+}
+.mechanism-canvas:active{cursor:grabbing}
+.mechanism-controls{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.mechanism-controls label{font:400 14px var(--preview-body);color:var(--muted)}
+.mechanism-play{
+ background:var(--paper-light);color:var(--ink);
+ border:1px solid var(--line);border-radius:8px;
+ padding:10px 16px;font:400 14px var(--preview-body);cursor:pointer;
+}
+.mechanism-play:hover{color:var(--orange);border-color:var(--orange)}
+.mechanism-play:active{transform:translateY(1px)}
+.mechanism-play:focus-visible,#mechanism-angle:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+#mechanism-angle{display:block;width:100%;margin:20px 0 0;accent-color:var(--orange);cursor:ew-resize}
+@media(max-width:700px){body .hero-mechanism{padding:16px}}
+
+body .hero-brick-city{min-width:0;align-self:center}
+.brick-city-canvas{display:block;width:100%;height:auto;aspect-ratio:15/11}
+
+body .hero:has(> .hero-copy:only-child){grid-template-columns:minmax(0,1fr)}
+
+body .printer-signature{min-width:0;align-self:center}
+.printer-canvas{display:block;width:100%;height:auto;aspect-ratio:15/11}
+
+/* Tinted glass for the FRC introduction, outside the interactive gear navigation. */
+body .frc-summary-glass{
+ min-width:0;
+ padding:clamp(20px,3vw,40px);
+ border:1px solid var(--experience-glass-edge);
+ border-radius:16px;
+ background:linear-gradient(145deg in oklch,var(--experience-glass-top),var(--experience-glass-base) 52%);
+ box-shadow:inset 0 1px 0 var(--experience-glass-light),0 12px 32px var(--experience-glass-shadow);
+ backdrop-filter:blur(10px);
+ -webkit-backdrop-filter:blur(10px);
+}
+body .frc-summary-glass .detail-facts{
+ background:transparent;
+ border-color:var(--experience-glass-edge);
+ box-shadow:none;
+}
+body .frc-summary-glass .detail-facts>div{background:oklch(27.950% 0.03685 260.03 / 0.35)}
+@media(prefers-reduced-transparency:reduce){
+ body .frc-summary-glass{background:var(--paper-light);backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+
+/* Shared material and radius refinements across the local portfolio. */
+:root{
+ --surface-edge:oklch(86.9% .02 250 / .25);
+ --surface-lit:oklch(29% .032 255 / .8);
+ --surface-highlight:oklch(98% .005 250 / .13);
+ --nav-outer-radius:12px;
+ --nav-inner-radius:6px;
+ --content-outer-radius:16px;
+ --content-padding:clamp(20px,3vw,40px);
+ --content-inner-radius:max(0px,calc(var(--content-outer-radius) - var(--content-padding)));
+}
+body .topbar nav,body .topbar nav.glass-ready{border-radius:var(--nav-outer-radius)}
+body .topbar nav a{border-radius:var(--nav-inner-radius)}
+body .frc-summary-glass{
+ border-radius:var(--content-outer-radius);
+ padding:var(--content-padding);
+}
+body .frc-summary-glass .detail-facts{border-radius:var(--content-inner-radius)}
+body .detail-photo img{border-radius:inherit}
+body .about-page-details article,
+body .resume-entry,
+body .detail-photo-note,
+body .top-skills-list{
+ border-color:var(--surface-edge);
+ background-color:var(--surface-lit);
+ box-shadow:inset 0 1px 0 var(--surface-highlight);
+}
+body .ticker{
+ mask-image:linear-gradient(to right,transparent,black 4%,black 96%,transparent);
+ -webkit-mask-image:linear-gradient(to right,transparent,black 4%,black 96%,transparent);
+}
+body .ticker-track:hover,body .ticker-track:focus-within{animation-play-state:paused}
+body .text-link>span,
+body .all-experience-link>span,
+body .contact-mail>span{font-weight:500}
+@media(max-width:700px){
+ body.experience-page .story-visual{height:42dvh}
+ body.experience-page .chapter{min-height:82dvh}
+}
+
+/* Shared hierarchy, typography, and useful interaction feedback. */
+:root{
+ --text-readable:oklch(87% .025 255);
+ --text-quiet:oklch(76% .025 255);
+ --primary-action-fill:oklch(76.9% .165 70);
+ --primary-action-ink:oklch(20.8% .04 266);
+ --layout-gap:clamp(16px,2vw,32px);
+}
+body h1,body h2,body h3{
+ min-width:0;
+ overflow-wrap:break-word;
+ text-wrap:balance;
+ font-style:normal;
+}
+body h1 em,body h2 em,body h3 em{font-style:normal}
+body .hero-statement em{font-style:normal}
+body .chapter-date,
+body .detail-date,
+body .resume-date,
+body .detail-facts b,
+body .chapter-points b{font-variant-numeric:tabular-nums}
+body .detail-role,
+body .detail-date,
+body .recognition-grid article>span,
+body .recognition-grid article>b,
+body .recognition-grid article>p,
+body .resume-entry h3,
+body .resume-entry p,
+body .about-page-prose,
+body .directory-role,
+body .directory-summary{font-family:var(--preview-body)}
+body .detail-work-row p,
+body .detail-work-row li,
+body .about-page-prose p,
+body .resume-entry p,
+body .resume-page .resume-bullets{
+ color:var(--text-readable);
+ font-size:16px;
+ line-height:1.75;
+}
+body .directory-role,
+body .chapter-date,
+body .detail-date{color:var(--text-quiet)}
+body .hero .round-link{
+ display:inline-flex;
+ align-items:center;
+ gap:16px;
+ padding:14px 20px;
+ border-radius:8px;
+ background:var(--primary-action-fill);
+ color:var(--primary-action-ink);
+ font:500 14px/1.3 var(--preview-body);
+ letter-spacing:0;
+ transition:transform 180ms ease;
+}
+body .hero .round-link b{
+ width:auto;height:auto;
+ border:0;border-radius:0;box-shadow:none;
+ background:transparent;color:inherit;
+ backdrop-filter:none;
+}
+body .hero .round-link:hover b{background:transparent;color:inherit;transform:none}
+body .hero .round-link:hover{transform:translateY(-2px)}
+body .hero .round-link:active{transform:translateY(0)}
+body .hero .round-link:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+body .detail-section-heading,
+body .directory-heading{column-gap:var(--layout-gap)}
+body .kicker-mark,
+body .section-title-mark{display:none}
+@media(prefers-reduced-motion:reduce){
+ body .hero .round-link{transition:none}
+ body .hero .round-link:hover{transform:none}
+}
+
+/* Shared glass for experience facts and skill summaries, without enclosing the introduction. */
+:root{
+ --summary-glass-top:oklch(87% .025 255 / .16);
+ --summary-glass-base:oklch(28% .04 257 / .52);
+ --summary-glass-edge:oklch(87% .025 255 / .36);
+ --summary-glass-highlight:oklch(98% .005 250 / .2);
+ --summary-glass-shadow:oklch(14% .04 260 / .22);
+}
+body .detail-facts,
+body .top-skills-list,
+body .intake-specs{
+ background:linear-gradient(145deg in oklch,var(--summary-glass-top),var(--summary-glass-base) 55%);
+ border:1px solid var(--summary-glass-edge);
+ box-shadow:inset 0 1px 0 var(--summary-glass-highlight),0 10px 28px var(--summary-glass-shadow);
+ backdrop-filter:blur(10px);
+ -webkit-backdrop-filter:blur(10px);
+}
+body .detail-facts>div,
+body .top-skills-list>li,
+body .intake-specs>div{
+ background:transparent;
+ box-shadow:none;
+}
+body .detail-facts>div+div,
+body .top-skills-list>li+li{
+ border-left:1px solid var(--summary-glass-edge);
+}
+@media(max-width:700px){
+ body .detail-facts>div+div{border-left:0;border-top:1px solid var(--summary-glass-edge)}
+}
+@media(prefers-reduced-transparency:reduce){
+ body .detail-facts,
+ body .top-skills-list,
+ body .intake-specs{
+  background:var(--paper-light);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+ }
+}
+
+body .detail-facts>div+div,
+body .top-skills-list>li+li,
+body .intake-specs>div+div{
+ border-left:0!important;
+ border-top:0!important;
+}
+body .detail-facts,
+body .top-skills-list{gap:0}
+
+/* Glass backing for award collections, separate from the individual medal artwork. */
+body .science-awards-year,
+body .debate-awards-year{
+ background:linear-gradient(145deg in oklch,var(--summary-glass-top),var(--summary-glass-base) 55%);
+ border:1px solid var(--summary-glass-edge);
+ border-radius:16px;
+ box-shadow:inset 0 1px 0 var(--summary-glass-highlight),0 10px 28px var(--summary-glass-shadow);
+ backdrop-filter:blur(10px);
+ -webkit-backdrop-filter:blur(10px);
+}
+@media(prefers-reduced-transparency:reduce){
+ body .science-awards-year,
+ body .debate-awards-year{
+  background:var(--paper-light);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+ }
+}
+
+/* Restore the stagger on detail routes whose legacy rules reset every transition delay. */
+body.detail-page .topbar nav a .nav-letter>span,
+body.experience-page .topbar nav a .nav-letter>span{
+ transition-property:transform!important;
+ transition-duration:480ms!important;
+ transition-timing-function:cubic-bezier(.22,.7,.2,1)!important;
+ transition-delay:calc(var(--letter-index)*22ms)!important;
+}
+@media(prefers-reduced-motion:reduce){
+ body.detail-page .topbar nav a .nav-letter>span,
+ body.experience-page .topbar nav a .nav-letter>span{
+  transition:none!important;transform:none!important;
+ }
+}
+
+/* Skills remain plain text; scroll triggers their letter reveal once per page load. */
+body .top-skills-list li,
+body .top-skills-list li:hover,
+body .top-skills-list li strong,
+body .top-skills-list li:hover strong{
+ color:var(--ink);
+ cursor:default;
+ transform:none;
+}
+.skill-readable{
+ position:absolute;width:1px;height:1px;overflow:hidden;
+ clip-path:inset(50%);white-space:nowrap;
+}
+.skill-roll-text{display:inline}
+.skill-letter-mask{display:inline-block;overflow:clip;vertical-align:bottom}
+.skill-letter{display:inline-block}
+@media(prefers-reduced-motion:no-preference){
+ .skill-roll .skill-letter{transform:translateY(110%)}
+ .skill-roll.skill-revealed .skill-letter{
+  animation:skill-letter-arrival 650ms cubic-bezier(.16,1,.3,1) both;
+  animation-delay:var(--skill-delay,0ms);
+ }
+}
+@keyframes skill-letter-arrival{
+ from{transform:translateY(110%)}
+ to{transform:translateY(0)}
+}
+@media(prefers-reduced-motion:reduce){
+ .skill-roll .skill-letter{transform:none;animation:none!important}
+}
+@media print{
+ .skill-roll .skill-letter{transform:none!important;animation:none!important}
+}
+
+/* Nested reveal spans inherit the metric's typography instead of the caption span rules. */
+body .detail-facts .skill-roll-text,
+body .detail-facts .skill-letter-mask,
+body .detail-facts .skill-letter{
+ font:inherit;
+ color:inherit;
+ letter-spacing:inherit;
+ text-align:inherit;
+}
+body .detail-facts b{color:var(--orange)}
+.skill-roll.skill-revealed .skill-letter{transform:translateY(0)}
+.skill-roll.skill-settled .skill-letter{
+ animation:none!important;
+ transform:none!important;
+ opacity:1;
+}
+
+/* Keep the outreach photo caption inside the rounded card's safe content area. */
+body .outreach-story-layout>.detail-photo{
+ height:auto;
+ overflow:hidden;
+}
+body .outreach-story-layout>.detail-photo figcaption{
+ display:block;
+ margin:0;
+ padding:12px 16px 16px;
+ min-height:44px;
+ height:auto;
+ line-height:1.5;
+ white-space:normal;
+ overflow-wrap:break-word;
+ font-family:var(--preview-body);
+ font-size:12px;
+}
+body .outreach-story-layout>.detail-photo img{
+ border-bottom-left-radius:0;
+ border-bottom-right-radius:0;
+}
+
+/* About page: safe text measures, consistent card insets, and room for descenders. */
+body.about-page .about-page-details{
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:16px;
+ border:0;
+}
+body.about-page .about-page-details article,
+body.about-page .about-page-details article+article{
+ min-width:0;
+ height:auto;
+ min-height:0;
+ padding:24px;
+ border:1px solid var(--summary-glass-edge);
+ border-radius:12px;
+}
+body.about-page .about-page-details article>b{
+ font-family:var(--preview-body);
+ font-size:clamp(19px,1.6vw,24px);
+ font-weight:500;
+ line-height:1.4;
+ letter-spacing:-.025em;
+ margin-top:20px;
+ overflow:visible;
+ overflow-wrap:break-word;
+}
+body.about-page .about-page-details article>p{
+ font-family:var(--preview-body);
+ font-size:14px;
+ line-height:1.7;
+ margin-top:12px;
+}
+body.about-page .about-page-details article>span{
+ font-family:var(--preview-body);
+ font-size:12px;
+ line-height:1.5;
+ letter-spacing:0;
+}
+body.about-page .about-page-hero h1{line-height:1.12}
+body.about-page .about-page-story h2{line-height:1.15}
+body.about-page .scroll-line-mask{
+ padding-block:.08em .18em;
+ margin-block:-.08em -.18em;
+}
+body.about-page .about-page-hero,
+body.about-page .about-page-story,
+body.about-page .about-page-prose{min-width:0}
+body.about-page .about-page-next>a{
+ font-family:var(--preview-body);
+ line-height:1.5;
+ padding-bottom:10px;
+ overflow-wrap:break-word;
+}
+@media(max-width:1000px){
+ body.about-page .about-page-details{grid-template-columns:minmax(0,1fr)}
+}
+
+/* Clickable homepage photographs: slower lift and a reversible tracing outline. */
+body.resume-page .resume-experience-card {
+ position:relative;
+ isolation:isolate;
+ transition:transform 250ms ease;
+}
+body.resume-page .resume-experience-card::after {
+ content:"";
+ position:absolute;
+ inset:0;
+ border-radius:inherit;
+ pointer-events:none;
+ z-index:2;
+ background:
+  linear-gradient(var(--ink),var(--ink)) left top / var(--trace-width,0%) 3.5px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) right top / 3.5px var(--trace-height,0%) no-repeat,
+  linear-gradient(var(--ink),var(--ink)) right bottom / var(--trace-width,0%) 3.5px no-repeat,
+  linear-gradient(var(--ink),var(--ink)) left bottom / 3.5px var(--trace-height,0%) no-repeat;
+ transition:--trace-width 260ms ease,--trace-height 260ms ease 100ms;
+}
+@property --trace-width {
+ syntax:"<percentage>";
+ inherits:false;
+ initial-value:0%;
+}
+@property --trace-height {
+ syntax:"<percentage>";
+ inherits:false;
+ initial-value:0%;
+}
+@media(hover:hover){
+ body.resume-page .resume-experience-card:hover::after{
+  --trace-width:100%;
+  --trace-height:100%;
+ }
+}
+body.resume-page .resume-experience-card:focus-within::after{
+ --trace-width:100%;
+ --trace-height:100%;
+ transition:none;
+}
+@media(prefers-reduced-motion:reduce){
+ body.resume-page .resume-experience-card,
+ body.resume-page .resume-experience-card::after{transition:none!important}
+ body.resume-page .resume-experience-card:hover{transform:none}
+}
+
+
+body.resume-page .resume-content>section[aria-label="Experience"]{
+ display:grid;
+ grid-template-columns:minmax(0,1fr);
+ gap:20px;
+}
+body.resume-page .resume-content>section[aria-label="Experience"]>.resume-entry{grid-column:auto}
+body.resume-page .resume-section-title>span{display:none}
+body.resume-page .resume-entry{
+ min-width:0;
+ padding:24px;
+ border:1px solid var(--summary-glass-edge);
+ border-radius:12px;
+ margin:0;
+}
+body.resume-page .resume-experience-card{
+ position:relative;
+ isolation:isolate;
+ background:linear-gradient(145deg in oklch,var(--summary-glass-top),var(--summary-glass-base));
+ transition:transform 250ms ease;
+}
+body.resume-page .resume-entry h3{
+ font:600 clamp(19px,2vw,25px)/1.4 var(--preview-body);
+ letter-spacing:-.02em;
+ margin-bottom:12px;
+}
+body.resume-page .resume-entry strong{font-weight:600;color:var(--ink)}
+body.resume-page .resume-entry .resume-card-link{
+ color:var(--ink);
+ border:0;
+}
+body.resume-page .resume-card-link::after{
+ content:"";position:absolute;inset:0;z-index:2;border-radius:inherit;
+}
+body.resume-page .resume-experience-card .resume-bullets a{
+ position:relative;z-index:3;
+}
+body.resume-page .resume-experience-card:focus-within{outline:2px solid var(--orange);outline-offset:4px}
+body.resume-page .resume-date{line-height:1.6!important;font-size:13px!important;margin-bottom:14px!important}
+@media(hover:hover){
+ body.resume-page .resume-experience-card:hover{transform:translateY(-4px)}
+}
+@media(prefers-reduced-motion:reduce){
+ body.resume-page .resume-experience-card:hover{transform:none}
+}
+@media print{
+ body.resume-page .resume-entry{break-inside:avoid}
+ body.resume-page .resume-card-link::after{display:none}
+}
+
+/* Align résumé experience cards with the Education content column. */
+@media(min-width:901px){
+ body.resume-page .resume-content>section[aria-label="Experience"]{
+  grid-template-columns:minmax(0,1fr) minmax(0,3fr);
+  column-gap:var(--portfolio-gap);
+  row-gap:16px;
+ }
+ body.resume-page .resume-content>section[aria-label="Experience"]>.resume-section-title{
+  grid-column:1;grid-row:1;align-self:start;
+ }
+ body.resume-page .resume-content>section[aria-label="Experience"]>.resume-entry{
+  grid-column:2;
+ }
+}
+body.resume-page .resume-experience-card{padding:20px}
+
+/* Performing Arts follows the same readable hierarchy as the other experience pages. */
+body.performing-arts-page .detail-hero{
+ padding-block:64px;
+}
+body.performing-arts-page .detail-hero h1{
+ font-size:clamp(52px,7vw,96px);
+ line-height:1.12;
+ max-width:14ch;
+}
+body.performing-arts-page .detail-date{
+ font-family:var(--preview-body);
+ font-size:14px;
+ line-height:1.7;
+ max-width:65ch;
+}
+body.performing-arts-page .detail-role{
+ font-family:var(--preview-body);
+ font-size:20px;
+ line-height:1.5;
+ margin-block:20px;
+}
+body.performing-arts-page .detail-lede{
+ max-width:52ch;
+ font-size:clamp(19px,2vw,25px);
+ line-height:1.6;
+}
+body.performing-arts-page .detail-story{padding-block:48px 64px}
+body.performing-arts-page .detail-section-heading h2{
+ font-size:clamp(36px,5vw,64px);
+ line-height:1.16;
+}
+body.performing-arts-page .detail-work-row:not(.top-skills){
+ display:grid;
+ grid-template-columns:minmax(0,1fr) minmax(0,1.65fr);
+ gap:32px;
+ padding:28px;
+ margin-bottom:20px;
+ border:1px solid var(--summary-glass-edge);
+ border-radius:12px;
+ background:linear-gradient(145deg in oklch,var(--summary-glass-top),var(--summary-glass-base));
+}
+body.performing-arts-page .detail-work-row h3{
+ font:500 clamp(21px,2vw,28px)/1.4 var(--preview-body);
+ letter-spacing:-.025em;
+}
+body.performing-arts-page .detail-work-row p{
+ margin:0;
+ max-width:62ch;
+}
+body.performing-arts-page .top-skills{margin-top:40px}
+body.performing-arts-page .detail-neighbor{padding-block:24px 48px}
+@media(max-width:760px){
+ body.performing-arts-page .detail-hero{padding-block:40px}
+ body.performing-arts-page .detail-work-row:not(.top-skills){
+  grid-template-columns:minmax(0,1fr);
+  gap:16px;
+  padding:20px;
+ }
+}
+
+/* The full-card link sits outside heading masks so rolling text cannot clip its hit area. */
+body.resume-page .resume-card-link::after{display:none}
+body.resume-page .resume-card-hit{
+ position:absolute;inset:0;z-index:2;
+ border:0;border-radius:inherit;
+}
+body.resume-page .resume-card-link{position:relative;z-index:3}
+
+body .detail-neighbor{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ gap:24px;
+ padding-block:32px;
+}
+body .detail-neighbor>a{font-family:var(--preview-body)}
+body #all-experience{scroll-margin-top:112px}
+
+body.about-page .lego-scroll-study{margin-block:72px}
+.lego-study-intro{max-width:680px;margin-bottom:32px}
+.lego-study-intro h2,.custom-lego-section h2{
+ font:500 clamp(36px,5vw,64px)/1.15 var(--preview-body);letter-spacing:-.04em;
+}
+.lego-study-intro p{font:400 16px/1.7 var(--preview-body);color:var(--muted);margin-top:20px}
+.lego-study-track{height:430dvh;position:relative}
+.lego-study-stage{position:sticky;top:100px;height:calc(100dvh - 116px);display:grid;grid-template-rows:minmax(0,1fr) auto}
+.lego-study-canvas{width:100%;height:100%;object-fit:contain;min-height:0}
+.lego-study-status{font:400 14px/1.5 var(--preview-body);color:var(--muted);padding:12px;text-align:center}
+.custom-lego-section{padding-block:56px 72px}
+@media(prefers-reduced-motion:reduce){
+ .lego-study-track{height:auto}
+ .lego-study-stage{position:relative;top:auto;height:auto}
+ .lego-study-canvas{aspect-ratio:680/760}
+}
+
+/* Shared portfolio typography requested for publication. */
+:root{
+ --preview-body:"Roboto Slab",serif;
+ --preview-display:"Roboto Slab",serif;
+ --body:"Roboto Slab",serif;
+ --display:"Roboto Slab",serif;
+ --mono:"Roboto Slab",serif;
+}
+
+/* Clear dark glass without the diffuse gray wash around panels. */
+body .recognition .recognition-grid article,
+body .recognition .recognition-grid article:hover{
+ background:oklch(27.5% .035 257 / .72);
+ border-color:oklch(84% .02 255 / .25);
+ box-shadow:inset 0 1px 0 oklch(98% .005 250 / .08);
+}
+body .topbar nav,
+body .topbar nav.glass-ready{
+ background:oklch(27.5% .035 257 / .38);
+ border-color:oklch(84% .02 255 / .25);
+ box-shadow:inset 0 1px 0 oklch(98% .005 250 / .08);
+}
+
+/* Restore the slate-blue experience panels and remove the diffuse halo. */
+:root{
+ --experience-glass-top:oklch(86% .02 255 / .07);
+ --experience-glass-base:oklch(27.5% .035 257 / .9);
+ --experience-glass-edge:oklch(84% .02 255 / .25);
+ --experience-glass-light:oklch(98% .005 250 / .08);
+}
+body.experience-page .chapter,
+body.experience-page .directory-card,
+body.experience-page .directory-card:hover,
+body.experience-page .story-visual{
+ background:oklch(27.5% .035 257 / .9);
+ border-color:var(--experience-glass-edge);
+ box-shadow:inset 0 1px 0 var(--experience-glass-light);
+}
+
+/* Keep shared glass panels dark and clear, without a gray flood or outer glow. */
+:root{
+ --summary-glass-top:oklch(86% .02 255 / .06);
+ --summary-glass-base:oklch(27.5% .035 257 / .9);
+ --summary-glass-edge:oklch(84% .02 255 / .25);
+ --summary-glass-highlight:oklch(98% .005 250 / .08);
+ --summary-glass-shadow:transparent;
+}
+body .detail-facts,
+body .top-skills-list,
+body .intake-specs,
+body .science-awards-year,
+body .debate-awards-year,
+body.resume-page .resume-experience-card{
+ background:oklch(27.5% .035 257 / .9);
+ border-color:var(--summary-glass-edge);
+ box-shadow:inset 0 1px 0 var(--summary-glass-highlight);
+}
