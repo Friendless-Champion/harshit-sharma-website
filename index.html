@@ -1,33 +1,7 @@
 <!doctype html>
 <html lang="en">
-<head><style id="portfolio-first-paint">
-html{background:#0F172A}
-.portfolio-loader{display:none}
-html.portfolio-loading body{background:linear-gradient(145deg,#0F172A,#17263e)!important;min-height:100dvh}
-html.portfolio-loading body>header,html.portfolio-loading body>main,html.portfolio-loading body>footer{visibility:hidden}
-html.portfolio-loading .portfolio-loader{display:grid;position:fixed;inset:0;z-index:500;align-content:start;gap:32px;padding:32px 6vw;background:linear-gradient(145deg,#0F172A,#17263e)}
-.portfolio-loader-nav{width:min(360px,65%);height:54px;justify-self:end;border-radius:12px}
-.portfolio-loader-title{width:min(640px,75%);height:100px;margin-top:100px;border-radius:12px}
-.portfolio-loader-copy{width:min(480px,65%);height:22px;border-radius:6px}
-.portfolio-loader-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:24px}
-.portfolio-loader-card{height:240px;border-radius:16px}
-.portfolio-loader-nav,.portfolio-loader-title,.portfolio-loader-copy,.portfolio-loader-card{background:#29374a;animation:portfolio-loading-pulse 1.4s ease-in-out infinite alternate}
-@keyframes portfolio-loading-pulse{to{opacity:.55}}
-@media(max-width:700px){.portfolio-loader-cards{grid-template-columns:minmax(0,1fr)}.portfolio-loader-title{height:76px;margin-top:64px}.portfolio-loader-card{height:160px}}
-@media(prefers-reduced-motion:reduce){.portfolio-loader *{animation:none!important}}
-</style>
-<script>
-document.documentElement.classList.add('portfolio-loading');
-document.addEventListener('DOMContentLoaded',()=>{
- const fontReady=document.fonts?document.fonts.ready:Promise.resolve();
- Promise.race([fontReady,new Promise(resolve=>setTimeout(resolve,1600))]).then(()=>{
-  requestAnimationFrame(()=>requestAnimationFrame(()=>{
-   document.documentElement.classList.remove('portfolio-loading');
-   document.querySelector('.portfolio-loader')?.remove();
-  }));
- });
-},{once:true});
-</script>
+<head><style>html{background:#0F172A}</style>
+
   <meta name="google-site-verification" content="YTvH2qUtciLG-9O_1C1EJw9zQFdNfsNiFoniBlcFSCU" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,10 +11,10 @@ document.addEventListener('DOMContentLoaded',()=>{
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=slate-20261120-2">
   <script src="script.js?v=analytics-20261102" defer></script>
 <link rel="modulepreload" href="assets/vendor/liquidglass/index.js"><link rel="modulepreload" href="liquidglass-preview.js"></head>
-<body><div class="portfolio-loader" aria-hidden="true"><div class="portfolio-loader-nav"></div><div class="portfolio-loader-title"></div><div class="portfolio-loader-copy"></div><div class="portfolio-loader-cards"><div class="portfolio-loader-card"></div><div class="portfolio-loader-card"></div></div></div>
+<body>
   <div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
   <header class="topbar">
     <a class="wordmark" href="index.html#top" aria-label="Harshit Sharma, home">HS<span class="wordmark-dot">.</span></a>
@@ -80,5 +54,5 @@ document.addEventListener('DOMContentLoaded',()=>{
     </section>
   </main>
   <footer><a class="wordmark" href="#top">HS<span class="wordmark-dot">.</span></a><span>MADE WITH CURIOSITY · © <span id="year">2026</span></span><a class="footer-contact" href="mailto:harshith.b.sharma2@gmail.com">LET&#8217;S TALK ↗</a><a href="#top">BACK TO THE TOP ↑</a></footer>
-<script type="module" src="liquidglass-preview.js"></script><script type="module" src="scroll-preview.js"></script><script type="module" src="printer-signature.js"></script></body>
+<script type="module" src="liquidglass-preview.js?v=slate-20261120-2"></script><script type="module" src="scroll-preview.js"></script><script type="module" src="printer-signature.js"></script></body>
 </html>
