@@ -37,6 +37,7 @@ if(canvas){
  }
  let phase=0,frame=0,last=0;
  let active=true;
+ let filament=getComputedStyle(document.documentElement).getPropertyValue("--orange").trim();
  function draw(){
   ctx.clearRect(0,0,600,440);
   const travel=Math.min(1,phase/.80);
@@ -47,11 +48,17 @@ if(canvas){
   for(let layer=31;layer>=0;layer--){
    const depth=layer+1;
    const alpha=Math.max(0,1-depth/33);
-   path(1,depth*2.5+shift,'rgba(245,158,11,'+(alpha*.65)+')',1.65);
-   path(1,depth*2.5+shift-1,'rgba(255,210,115,'+(alpha*.5)+')',1);
+   ctx.globalAlpha=alpha*.8;
+   path(1,depth*2.5+shift,filament,1.65);
+   ctx.globalAlpha=alpha*.45;
+   path(1,depth*2.5+shift-1,filament,1);
+   ctx.globalAlpha=1;
   }
-  const tip=path(travel,shift,'#F59E0B',2);
-  path(travel,shift-1,'#fbd477',1);
+  ctx.globalAlpha=(1-1/33)*.8;
+  const tip=path(travel,shift,filament,1.65);
+  ctx.globalAlpha=(1-1/33)*.45;
+  path(travel,shift-1,filament,1);
+  ctx.globalAlpha=1;
   // Unbranded light front housing with an exposed drive indicator and dark hotend shroud.
   const x=tip.x,y=tip.y-smooth*2.5;
   ctx.save();ctx.translate(x,y);ctx.scale(.88,.88);ctx.translate(-x,-y);
@@ -89,6 +96,7 @@ if(canvas){
 
  }
  function resize(){
+  filament=getComputedStyle(document.documentElement).getPropertyValue("--orange").trim();
   const rect=canvas.getBoundingClientRect(),scale=Math.min(devicePixelRatio||1,2);
   canvas.width=Math.round(rect.width*scale);canvas.height=Math.round(rect.height*scale);
   ctx.setTransform(canvas.width/600,0,0,canvas.height/440,0,0);
@@ -104,6 +112,7 @@ if(canvas){
   if(active&&!reduced.matches)frame=requestAnimationFrame(animate);
   else draw();
  }
+ addEventListener('themechange',()=>{filament=getComputedStyle(document.documentElement).getPropertyValue('--orange').trim();draw();});
  new ResizeObserver(resize).observe(canvas);
  new IntersectionObserver(entries=>{active=entries[0].isIntersecting&&!document.hidden;resume();}).observe(canvas);
  document.addEventListener('visibilitychange',()=>{active=!document.hidden;resume();});

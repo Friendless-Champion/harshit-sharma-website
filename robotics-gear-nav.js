@@ -17,31 +17,17 @@
         points.push(`${(50 + Math.cos(angle) * radius).toFixed(2)},${(50 + Math.sin(angle) * radius).toFixed(2)}`);
       }
     }
-    teeth.setAttribute("d", `M${points.join(" L")} Z`);
+    const hub = teeth.parentElement.querySelector(".gear-hub");
+    const radius = Number(hub?.getAttribute("r")) || 24;
+    const hole = `M${50-radius},50 a${radius},${radius} 0 1,0 ${radius*2},0 a${radius},${radius} 0 1,0 ${-radius*2},0 Z`;
+    teeth.setAttribute("fill-rule", "evenodd");
+    teeth.setAttribute("d", `M${points.join(" L")} Z ${hole}`);
   }
 
   const currentFile = window.location.pathname.split("/").pop();
   const currentLink = links.find((link) => link.getAttribute("href") === currentFile);
   if (currentLink) currentLink.setAttribute("aria-current", "page");
 
-  let activeIndex = Math.max(0, links.indexOf(currentLink));
-  let timer;
-  const spotlight = (index) => {
-    activeIndex = index % links.length;
-    links.forEach((link, linkIndex) => link.classList.toggle("is-spotlight", linkIndex === activeIndex));
-    if (status) status.textContent = `16:12 · 4:3  /  ${String(activeIndex + 1).padStart(2, "0")} / 03 · ${labels[activeIndex]}`;
-  };
-
-  spotlight(activeIndex);
-  if (!prefersReducedMotion.matches) {
-    timer = window.setInterval(() => spotlight(activeIndex + 1), 3600);
-  }
-  prefersReducedMotion.addEventListener("change", (event) => {
-    if (event.matches) {
-      window.clearInterval(timer);
-      spotlight(Math.max(0, links.indexOf(currentLink)));
-    } else {
-      timer = window.setInterval(() => spotlight(activeIndex + 1), 3600);
-    }
-  });
+  // Only the current page is highlighted; the gears retain their own motion.
+  links.forEach((link) => link.classList.toggle("is-spotlight", link === currentLink));
 })();

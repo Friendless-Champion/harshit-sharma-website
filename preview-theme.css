@@ -1404,3 +1404,638 @@ body.resume-page .resume-experience-card{
 body .detail-facts{
  grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));
 }
+
+
+
+
+/* Local palette study: silver ground, platinum cards, ruby secondary, emerald accents. */
+:root{
+ --paper:#e5e7eb;
+ --paper-light:#f8fafc;
+ --ink:#111827;
+ --muted:#374151;
+ --text-readable:#111827;
+ --text-quiet:#374151;
+ --line:rgba(17,24,39,.18);
+ --local-platinum:#f8fafc;
+ --local-ruby:#9b111e;
+ --local-emerald:#046a67;
+ --orange:#046a67;
+ --blue:#9b111e;
+ --green:#046a67;
+ --surface-lit:#f8fafc;
+ --preview-dot:rgba(17,24,39,.12);
+ --summary-glass-edge:rgba(17,24,39,.18);
+ --experience-glass-edge:rgba(17,24,39,.18);
+ --surface-edge:rgba(17,24,39,.18);
+ --primary-action-fill:#9b111e;
+ --primary-action-ink:#f8fafc;
+ --nav-glass-fill:rgba(155,17,30,.9);
+}
+html,body,body.experience-page{background-color:var(--paper)!important}
+body .recognition .recognition-grid article,
+body .recognition .recognition-grid article:hover,
+body.experience-page .chapter,
+body.experience-page .directory-card,
+body.experience-page .directory-card:hover,
+body.experience-page .story-visual,
+body .detail-facts,
+body .top-skills-list,
+body .intake-specs,
+body .science-awards-year,
+body .debate-awards-year,
+body.resume-page .resume-experience-card,
+body .about-page-details article,
+body .detail-photo-note{
+ background:var(--local-platinum);
+ color:var(--ink);
+ border-color:var(--line);
+}
+body .topbar nav,body .topbar nav.glass-ready{
+ background:var(--local-ruby);
+ color:var(--local-platinum);
+ border-color:rgba(248,250,252,.25);
+}
+body .topbar nav a{color:var(--local-platinum)}
+body .topbar nav a:hover{color:var(--local-emerald);background:rgba(17,24,39,.12)}
+body .contact-section{
+ background:var(--local-ruby);
+ color:var(--local-platinum);
+}
+body .contact-section .contact-inner h2,
+body .contact-section .contact-mail,
+body .contact-section .contact-bottom,
+body .contact-section .contact-inner .kicker{color:var(--local-platinum)}
+body footer{background:var(--paper);color:var(--ink)}
+body .hero h1 .accent-word,
+body .about-page-hero h1,
+body .detail-hero h1,
+body .resume-content h1,
+body .section-intro h2 span,
+body .directory-heading h2 span{color:var(--local-ruby)}
+body .hero-statement em{color:var(--local-ruby)}
+body .detail-facts b,
+body .resume-date,
+body .chapter-date,
+body .detail-date,
+body .directory-category,
+body .directory-role,
+body .recognition-grid article>span{color:var(--local-ruby)!important}
+body .text-link:hover,
+body .all-experience-link:hover,
+body .about-page-next>a:hover{color:var(--local-ruby)}
+body .home-photo-grid a::after,
+body .recognition .recognition-grid article::after,
+body.experience-page .directory-card::after,
+body.resume-page .resume-experience-card::after{
+ background:
+ linear-gradient(var(--local-emerald),var(--local-emerald)) left top / var(--trace-width,0%) 3.5px no-repeat,
+ linear-gradient(var(--local-emerald),var(--local-emerald)) right top / 3.5px var(--trace-height,0%) no-repeat,
+ linear-gradient(var(--local-emerald),var(--local-emerald)) right bottom / var(--trace-width,0%) 3.5px no-repeat,
+ linear-gradient(var(--local-emerald),var(--local-emerald)) left bottom / 3.5px var(--trace-height,0%) no-repeat;
+}
+body :focus-visible{outline-color:var(--local-emerald)}
+body .reading-progress span{background:var(--local-emerald)}
+@media(max-width:700px){
+ :root{
+  --paper:#e5e7eb;--paper-light:#f8fafc;
+  --ink:#111827;--muted:#374151;--line:rgba(17,24,39,.18);
+  --orange:#046a67;--blue:#9b111e;--green:#046a67;
+ }
+}
+
+/* Supporting copy uses charcoal; display-title colors retain the current palette. */
+:root{
+ --muted:#111827;
+ --text-readable:#111827;
+ --text-quiet:#111827;
+}
+body p,
+body figcaption,
+body .kicker,
+body .detail-date,
+body .detail-role,
+body .detail-lede,
+body .resume-date,
+body .resume-summary,
+body .directory-category,
+body .directory-role,
+body .directory-summary,
+body .chapter-date,
+body .chapter-meta,
+body .intro-aside,
+body .topbar-note,
+body .about-page-index,
+body .about-page-details article>span,
+body .recognition-grid article>span,
+body .recognition-grid article>p,
+body .detail-facts div>span,
+body .scene-index,
+body .scene-hud,
+body .scene-caption,
+body .section-endnote,
+body .contact-bottom,
+body .mechanism-controls label,
+body footer{
+ color:#111827!important;
+}
+body .hero-statement em{color:#111827}
+body .contact-section .contact-bottom{
+ background:var(--local-platinum);
+ padding:16px;
+ border-radius:8px;
+}
+@media(max-width:700px){:root{--muted:#111827}}
+
+/* Local dominant background restored to the supplied slate swatch. */
+:root{--paper:#6d8196}
+html,body,body.experience-page{background-color:var(--paper)!important}
+@media(max-width:700px){:root{--paper:#6d8196}}
+
+/* Local dominant background color trial. */
+:root{--paper:#e2e2df}
+html,body,body.experience-page{background-color:var(--paper)!important}
+@media(max-width:700px){:root{--paper:#e2e2df}}
+
+/* Local light-theme glass: neutral surface, clear charcoal labels and restrained refraction. */
+body .topbar nav,
+body .topbar nav.glass-ready{
+ background:rgba(248,250,252,.48);
+ color:var(--ink);
+ border:1px solid rgba(17,24,39,.2);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.75),0 4px 12px rgba(17,24,39,.06);
+ backdrop-filter:blur(12px) saturate(105%);
+ -webkit-backdrop-filter:blur(12px) saturate(105%);
+}
+body .topbar nav a{color:var(--ink)}
+body .topbar nav a:hover{
+ color:var(--local-ruby);
+ background:rgba(17,24,39,.045);
+}
+body .topbar nav.glass-ready>canvas{opacity:.35}
+@media(prefers-reduced-transparency:reduce){
+ body .topbar nav,body .topbar nav.glass-ready{
+  background:var(--local-platinum);
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+ }
+}
+
+/* Visible refractive glass over the light palette, without a pink fill. */
+body .topbar nav{
+ background:rgba(248,250,252,.32);
+ border-color:rgba(255,255,255,.8);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(17,24,39,.12),0 3px 10px rgba(17,24,39,.08);
+}
+body .topbar nav.glass-ready{
+ background:rgba(248,250,252,.1);
+ backdrop-filter:none;
+ -webkit-backdrop-filter:none;
+ border-color:rgba(255,255,255,.8);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(17,24,39,.12),0 3px 10px rgba(17,24,39,.08);
+}
+body .topbar nav.glass-ready>canvas{opacity:1}
+@media(prefers-reduced-transparency:reduce){
+ body .topbar nav,body .topbar nav.glass-ready{background:var(--local-platinum)}
+}
+
+/* Ruby-tinted refractive navigation glass. */
+body .topbar nav,
+body .topbar nav.glass-ready{
+ background:rgba(155,17,30,.82);
+ border-color:rgba(155,17,30,.8);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.32),inset 0 -1px 0 rgba(73,5,12,.25),0 3px 10px rgba(17,24,39,.08);
+}
+body .topbar nav a{color:#f8fafc}
+body .topbar nav a:hover{
+ color:#f8fafc;
+ background:rgba(255,255,255,.1);
+}
+body .topbar nav.glass-ready>canvas{opacity:.48}
+
+/* Refract a ruby substrate rather than bleaching it with the pale page color. */
+body .topbar nav,
+body .topbar nav.glass-ready{
+ background:#9b111e;
+ border:1px solid rgba(78,4,13,.65);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -1px 0 rgba(45,2,8,.35),0 4px 10px rgba(17,24,39,.1);
+}
+body .topbar nav.glass-ready>canvas{opacity:1}
+
+/* A reflected light streak gives the ruby glass a polished curved surface. */
+body .topbar nav::after{
+ content:"";
+ position:absolute;
+ inset:2px;
+ z-index:0;
+ border-radius:10px;
+ pointer-events:none;
+ background:
+  linear-gradient(112deg,transparent 8%,rgba(255,255,255,.12) 25%,transparent 43%,transparent 72%,rgba(255,255,255,.05) 91%,transparent),
+  linear-gradient(to bottom,rgba(255,255,255,.13),transparent 35%,transparent 78%,rgba(255,255,255,.06));
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.3),inset 1px 0 0 rgba(255,255,255,.12);
+}
+body .topbar nav,
+body .topbar nav.glass-ready{
+ border-color:rgba(82,3,15,.65);
+ box-shadow:inset 0 2px 0 rgba(255,255,255,.38),inset 0 -2px 0 rgba(43,2,8,.32),0 5px 14px rgba(17,24,39,.12);
+}
+
+/* Let LiquidGlass supply refraction and highlights without an extra captured overlay. */
+body .topbar nav::after{content:none}
+
+/* Trace the rounded image perimeter instead of clipping four straight gradient lines. */
+body .home-photo-grid a::after{content:none}
+.image-trace{
+ position:absolute;inset:0;width:100%;height:100%;
+ pointer-events:none;z-index:2;overflow:visible;
+}
+.image-trace rect{
+ fill:none;
+ stroke:var(--orange);
+ stroke-width:3.5px;
+ stroke-linecap:round;
+ stroke-dasharray:1;
+ stroke-dashoffset:1;
+ transition:stroke-dashoffset 420ms ease;
+}
+@media(hover:hover){
+ .home-photo-grid a:hover .image-trace rect{stroke-dashoffset:0}
+}
+.home-photo-grid a:focus-visible .image-trace rect{
+ stroke-dashoffset:0;transition:none;
+}
+@media(prefers-reduced-motion:reduce){
+ .image-trace rect{transition:none}
+}
+
+/* The same rounded tracing perimeter on every outlined interactive card. */
+body .recognition .recognition-grid article::after,
+body.experience-page .directory-card::after,
+body.resume-page .resume-experience-card::after{content:none!important}
+@media(hover:hover){
+ .recognition-grid article:hover .image-trace rect,
+ .directory-card:hover .image-trace rect,
+ .resume-experience-card:hover .image-trace rect{stroke-dashoffset:0}
+}
+.recognition-grid article:focus-within .image-trace rect,
+.directory-card:focus-within .image-trace rect,
+.resume-experience-card:focus-within .image-trace rect{
+ stroke-dashoffset:0;
+ transition:none;
+}
+
+.rounded-trace-host{position:relative}
+@media(hover:hover){
+ .rounded-trace-host:hover>.image-trace rect{stroke-dashoffset:0}
+}
+.rounded-trace-host:focus-within>.image-trace rect{stroke-dashoffset:0;transition:none}
+
+/* Résumé hierarchy: page title, section heading, entry title, then body copy. */
+body.resume-page .resume-content>h1{
+ font-size:clamp(56px,8vw,112px);
+ line-height:1.1;
+}
+body.resume-page .resume-section-title h2{
+ font-family:var(--preview-body);
+ font-size:clamp(30px,3vw,38px);
+ font-weight:600;
+ line-height:1.25;
+}
+body.resume-page .resume-entry h3{
+ font-family:var(--preview-body);
+ font-size:clamp(22px,2vw,26px);
+ font-weight:600;
+ line-height:1.35;
+ margin-bottom:16px;
+}
+body.resume-page .resume-entry h3 a,
+body.resume-page .resume-entry h3 .scroll-line-mask,
+body.resume-page .resume-entry h3 .scroll-line-text{
+ font:inherit;
+ letter-spacing:inherit;
+}
+body.resume-page .resume-entry p,
+body.resume-page .resume-bullets,
+body.resume-page .resume-bullets li{
+ font-family:var(--preview-body);
+ font-size:16px;
+ line-height:1.75;
+}
+body.resume-page .resume-entry .resume-date{
+ font-size:14px!important;
+ font-weight:400;
+ line-height:1.5!important;
+ margin-bottom:12px!important;
+}
+body.resume-page .resume-entry h3>span{
+ font-family:var(--preview-body);
+ font-size:16px;
+ line-height:1.5;
+}
+
+/* Experience name > date range > description. */
+body.resume-page .resume-entry .resume-date{
+ font-size:18px!important;
+ font-weight:500;
+ line-height:1.5!important;
+}
+
+/* Reduced résumé entry scale while preserving the hierarchy. */
+body.resume-page .resume-entry h3{font-size:clamp(20px,1.8vw,24px)}
+body.resume-page .resume-entry .resume-date{font-size:16px!important}
+body.resume-page .resume-entry p,
+body.resume-page .resume-bullets,
+body.resume-page .resume-bullets li{font-size:14px}
+
+/* Local glass is reserved for the floating navigation. */
+body main *,
+body footer{
+ backdrop-filter:none!important;
+ -webkit-backdrop-filter:none!important;
+}
+body .recognition .recognition-grid article,
+body .recognition .recognition-grid article:hover,
+body.experience-page .chapter,
+body.experience-page .directory-card,
+body.experience-page .directory-card:hover,
+body.experience-page .story-visual,
+body .detail-facts,
+body .detail-facts>div,
+body .top-skills-list,
+body .top-skills-list>li,
+body .intake-specs,
+body .intake-specs>div,
+body .science-awards-year,
+body .debate-awards-year,
+body.resume-page .resume-experience-card,
+body .resume-entry,
+body .about-page-details article,
+body .detail-photo-note,
+body .frc-season-toggle,
+body .frc-season-transition,
+body .home-photo-grid a{
+ background:var(--local-platinum);
+ box-shadow:none;
+}
+body .frc-season-toggle::before,
+body .frc-season-toggle::after{background:none;box-shadow:none}
+body .detail-external,
+body .button,
+body .intake-play{
+ background:var(--paper-light);
+ box-shadow:none;
+}
+body .contact-section{backdrop-filter:none;-webkit-backdrop-filter:none}
+
+/* Override legacy high-specificity card gradients, including last-child résumé entries. */
+body.resume-page .resume-content .resume-entry,
+body.resume-page .resume-content .resume-entry:last-child,
+body.resume-page .resume-content .resume-experience-card,
+body .about-page-details article,
+body.experience-page .chapter,
+body.experience-page .directory-card,
+body.experience-page .story-visual,
+body .recognition .recognition-grid article,
+body .detail-facts,
+body .top-skills-list,
+body .intake-specs,
+body .science-awards-year,
+body .debate-awards-year,
+body .detail-photo-note{
+ background-color:var(--local-platinum)!important;
+ background-image:none!important;
+ box-shadow:none!important;
+ backdrop-filter:none!important;
+ -webkit-backdrop-filter:none!important;
+}
+
+/* Remove remaining legacy glass decoration from all page content. */
+body main *,
+body main *::before,
+body main *::after{
+ backdrop-filter:none!important;
+ -webkit-backdrop-filter:none!important;
+ box-shadow:none!important;
+}
+body main *{background-image:none!important}
+body .frc-season .frc-season-toggle,
+body .frc-season .frc-season-toggle:hover,
+body .frc-season .frc-season-toggle:active,
+body .frc-season-transition,
+body .community-card,
+body .paper,
+body .detail-work-row{
+ background-color:var(--local-platinum)!important;
+ background-image:none!important;
+ box-shadow:none!important;
+}
+body .frc-season .frc-season-toggle::before,
+body .frc-season .frc-season-toggle::after{content:none!important}
+
+/* Keep the expandable-tab chevrons while the surfaces remain flat. */
+body .frc-season .frc-season-toggle::after{
+ content:'›'!important;
+ position:absolute;
+ top:50%;
+ right:16px;
+ color:var(--local-ruby);
+ font:700 28px/1 var(--preview-body);
+ transform:translateY(-50%) rotate(180deg);
+ transform-origin:center;
+ transition:transform 250ms ease;
+}
+body .frc-season[open]>.frc-season-toggle::after{
+ transform:translateY(-50%) rotate(90deg);
+}
+@media(prefers-reduced-motion:reduce){
+ body .frc-season .frc-season-toggle::after{transition:none}
+}
+
+/* Use the current green accent for box hover feedback instead of legacy orange. */
+body .home-photo-grid a:hover,
+body .recognition .recognition-grid article:hover,
+body.experience-page .directory-card:hover,
+body.experience-page .chapter:hover,
+body.resume-page .resume-experience-card:hover,
+body .frc-season .frc-season-toggle:hover,
+body .detail-facts:hover,
+body .top-skills-list:hover,
+body .about-page-details article:hover,
+body .science-awards-year:hover,
+body .debate-awards-year:hover{
+ border-color:var(--local-emerald)!important;
+}
+body .rounded-trace-host>.image-trace rect{stroke:var(--local-emerald)}
+
+/* Numerical fact panels remain static on hover. */
+body .detail-facts,
+body .detail-facts:hover{
+ border-color:var(--summary-glass-edge)!important;
+ transform:none!important;
+ translate:none!important;
+ cursor:default;
+ box-shadow:none!important;
+}
+body .detail-facts>.image-trace{display:none!important}
+body .detail-facts::after{content:none!important}
+
+body .contact-section .contact-mail>span{
+ color:var(--local-emerald)!important;
+}
+
+/* Shader black is neutral in screen blending; the ruby base remains visible at all times. */
+body .topbar nav,
+body .topbar nav.glass-ready{
+ isolation:isolate;
+ background-color:#9b111e;
+ overflow:hidden;
+}
+body .topbar nav>canvas,
+body .topbar nav.glass-ready>canvas{
+ z-index:0!important;
+ mix-blend-mode:screen;
+ opacity:.55;
+ pointer-events:none;
+}
+body .topbar nav>a{position:relative;z-index:1}
+
+/* All interactive text color feedback uses the current green accent. */
+body a:not(.gear-link):hover,
+body a:not(.gear-link):focus-visible,
+body button:hover,
+body button:focus-visible,
+body .topbar nav a:hover,
+body .topbar nav a:focus-visible,
+body .text-link:hover,
+body .all-experience-link:hover,
+body .contact-mail:hover,
+body .about-page-next>a:hover,
+body .detail-external:hover{
+ color:var(--local-emerald)!important;
+}
+body a:not(.gear-link):hover>span,
+body a:not(.gear-link):hover>b,
+body a:not(.gear-link):focus-visible>span,
+body a:not(.gear-link):focus-visible>b{
+ color:inherit!important;
+}
+
+/* Base border and animated border share the exact same rounded SVG path. */
+body .rounded-trace-host,
+body .rounded-trace-host:hover{border-color:transparent!important}
+body .rounded-trace-host>.image-trace .trace-base{
+ stroke:var(--line);
+ stroke-width:1px;
+ stroke-dasharray:none;
+ stroke-dashoffset:0;
+ transition:stroke 180ms ease;
+}
+@media(hover:hover){
+ body .rounded-trace-host:hover>.image-trace .trace-base{stroke:var(--local-emerald)}
+}
+
+/* Skills heading sits on the page; only the inner rounded list is a panel. */
+body .detail-work-row.top-skills{
+ background-color:transparent!important;
+ background-image:none!important;
+ border-radius:0;
+ box-shadow:none!important;
+}
+
+/* Skill lists are static content, with no hover outline or lift. */
+body .top-skills-list,
+body .top-skills-list:hover{
+ border-color:var(--summary-glass-edge)!important;
+ transform:none!important;
+ translate:none!important;
+ cursor:default;
+ box-shadow:none!important;
+}
+body .top-skills-list>.image-trace{display:none!important}
+body .top-skills-list::after{content:none!important}
+body .top-skills-list li,
+body .top-skills-list li:hover{
+ cursor:default;
+ transform:none!important;
+}
+
+/* Robotics gears share the local palette while retaining their original mechanics. */
+body .gear-nav{
+ --paper:#e2e2df;
+ --paper-light:#f8fafc;
+ --ink:#111827;
+ --muted:#111827;
+ --blue:#9b111e;
+ --orange:#046a67;
+ --green:#046a67;
+}
+body .gear-link .gear-teeth{
+ fill:#f8fafc;
+ stroke:#9b111e;
+}
+body .gear-link .gear-rim{stroke:#9b111e}
+body .gear-link .gear-hub{
+ fill:#e2e2df;
+ stroke:#046a67;
+}
+body .gear-link[aria-current="page"] .gear-hub{fill:#f8fafc}
+body .gear-link,
+body .gear-link>span{color:#111827}
+body .gear-link.is-spotlight .gear-teeth,
+body .gear-link:hover .gear-teeth{fill:#f8fafc;stroke:#046a67}
+body .gear-link:hover>span{color:#046a67}
+body .gear-nav-heading{color:#111827}
+body .gear-nav-heading span{color:#9b111e}
+body .gear-link::before{background:none!important;box-shadow:none!important;border-color:transparent}
+
+/* Gear centers stay unfilled, including the current-page indicator. */
+body .gear-link .gear-hub,
+body .gear-link[aria-current="page"] .gear-hub{fill:none!important}
+
+/* Local mechanism surround: a visible tablet frame and readable controls. */
+body .intake-stage{padding:12px!important;border:3px solid #6d8196!important;border-radius:26px!important;background:#c4c4c4!important}
+body .intake-stage::after{inset:6px;border-radius:18px;border:1px solid #11182740}
+body .intake-stage-top,body .intake-stage-bottom{background:#e2e2df!important;color:#111827!important;border-color:#11182730!important;padding:16px 20px;line-height:1.5}
+body .intake-stage-top{border-radius:12px 12px 0 0}
+body .intake-stage-bottom{border-radius:0 0 12px 12px}
+body .intake-model-wrap{background:transparent!important;border-color:#11182730!important}
+body .intake-heading .period,body .intake-play-icon,body .intake-cad-link{color:#046a67!important}
+body .intake-specs{padding:18px 22px!important;border-radius:20px!important;background:#f8fafc!important}
+body .intake-specs>div{min-width:0;padding:6px 14px!important;gap:10px!important}
+body .intake-specs b{color:#9b111e!important;line-height:1.3!important;padding:0!important;overflow:visible!important}
+body .intake-specs span,body .intake-controls label,body .intake-controls output,body .intake-arm-controls,body .intake-arm-controls label,body .intake-note{color:#111827!important;line-height:1.6!important}
+body .intake-controls input,body .intake-arm-controls input{accent-color:#046a67!important}
+body .intake-play{background:#f8fafc!important;color:#111827!important;border:1px solid #11182740!important}
+body .intake-play:hover{border-color:#046a67!important}
+body .intake-cad-link{text-decoration-color:#046a67!important}
+@media(max-width:700px){body .intake-stage{padding:8px!important}body .intake-specs{padding:12px!important}body .intake-specs>div{padding:6px!important}}
+
+/* Bottom experience navigation matches the solid platinum cards. */
+body .detail-neighbor>a,
+body .detail-neighbor>a:hover,
+body .detail-neighbor>a:focus-visible{background:#f8fafc!important;background-image:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;color:#111827}
+body .detail-neighbor>a:hover,body .detail-neighbor>a:focus-visible{color:#046a67!important}
+
+body .topbar nav .scheme-toggle{position:relative;z-index:1;flex-shrink:0;border:0;border-left:1px solid #ffffff40;border-radius:0;background:transparent!important;color:#f8fafc!important;font:inherit;line-height:1.4;padding:8px 12px;cursor:pointer;white-space:nowrap}
+body .topbar nav .scheme-toggle:hover{color:#046a67!important}
+body .topbar nav .scheme-toggle:focus-visible{outline:2px solid #f8fafc;outline-offset:-2px}
+@media(max-width:600px){body .topbar nav{gap:10px!important;padding-inline:10px!important}body .topbar nav .scheme-toggle{font-size:11px;padding:8px 5px}}
+@media(max-width:600px){body .topbar nav{width:max-content!important;max-width:calc(100vw - 24px)!important;min-width:0!important;gap:8px!important}body .topbar nav>a{font-size:11px!important;padding-inline:2px!important}body .topbar nav .scheme-toggle{font-size:10px!important;padding-inline:4px!important}}
+
+body .topbar nav .scheme-toggle{display:flex!important;align-items:center;gap:2px;padding:3px!important;border:1px solid #ffffff25!important;border-radius:9px!important;background:#11182724!important;isolation:isolate}
+body .scheme-icon{display:grid;place-items:center;width:36px;height:36px;border-radius:6px;color:#ffffff80;transition:background-color .25s,color .25s}
+body .scheme-icon svg{width:20px;height:20px}
+body .scheme-toggle[aria-pressed="false"] .scheme-sun,body .scheme-toggle[aria-pressed="true"] .scheme-moon{background:#ffffff24;color:#f8fafc;box-shadow:0 1px 3px #11182720}
+@media(max-width:600px){body .scheme-icon{width:27px;height:30px}body .scheme-icon svg{width:17px;height:17px}}
+
+/* Theme control uses one physically sliding selection plate. */
+body .topbar nav .scheme-toggle{position:relative}
+body .scheme-toggle::before{content:'';position:absolute;left:3px;top:3px;width:36px;height:36px;border-radius:6px;background:#ffffff24;transition:transform .3s ease;pointer-events:none}
+body .scheme-toggle[aria-pressed="true"]::before{transform:translateX(38px)}
+body .scheme-toggle .scheme-icon{position:relative;background:transparent!important;box-shadow:none!important}
+@media(max-width:600px){body .scheme-toggle::before{width:27px;height:30px}body .scheme-toggle[aria-pressed="true"]::before{transform:translateX(29px)}}
+@media(prefers-reduced-motion:reduce){body .scheme-toggle::before{transition:none}}
+
+/* Scene annotations remain readable on the light CAD plate. */
+body .scene-callout{background:#f8fafc!important;color:#111827!important;border:1px solid #11182740!important}
+body .scene-index,body .scene-index i{color:#111827!important}

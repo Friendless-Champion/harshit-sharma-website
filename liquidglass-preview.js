@@ -1,6 +1,7 @@
 import { LiquidGlass } from './assets/vendor/liquidglass/index.js';
 const header = document.querySelector('.topbar');
 const navigation = header?.querySelector('nav');
+
 if (header && navigation && !matchMedia('(prefers-reduced-transparency: reduce)').matches) {
  const background = document.createElement('canvas');
  background.className = 'glass-grid-source';
@@ -13,18 +14,22 @@ if (header && navigation && !matchMedia('(prefers-reduced-transparency: reduce)'
   background.height=rect.height*scale;
   const ctx=background.getContext('2d');
   ctx.scale(scale,scale);
-  ctx.fillStyle='#0F172A';
+  ctx.fillStyle=getComputedStyle(document.documentElement).getPropertyValue('--paper').trim()||'#e2e2df';
   ctx.fillRect(0,0,rect.width,rect.height);
   ctx.fillStyle='rgba(148,163,184,.18)';
   for(let x=10-(rect.left%20);x<rect.width;x+=20) for(let y=10-((rect.top+scrollY)%20);y<rect.height;y+=20) {
    ctx.beginPath();ctx.arc(x,y,.8,0,Math.PI*2);ctx.fill();
   }
- }
+  const navBounds=navigation.getBoundingClientRect();
+  ctx.fillStyle=document.documentElement.dataset.theme==='dark'?'#1e293b':'#9b111e';
+  ctx.beginPath();
+  ctx.roundRect(navBounds.left-rect.left,navBounds.top-rect.top,navBounds.width,navBounds.height,12);
+  ctx.fill(); }
  paint();
  navigation.dataset.config=JSON.stringify({
   floating:false,cornerRadius:14,zRadius:12,blurAmount:.08,
-  refraction:.65,chromAberration:.025,edgeHighlight:.25,
-  specular:.12,fresnel:.45,shadowOpacity:0,tintStrength:.06
+  refraction:.7,chromAberration:.018,edgeHighlight:.24,
+  specular:.2,fresnel:.6,shadowOpacity:0,tintStrength:0
  });
  try {
   const instance=await LiquidGlass.init({root:header,glassElements:[navigation]});
